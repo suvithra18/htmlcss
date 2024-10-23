@@ -1,0 +1,132 @@
+<html>
+	<head>
+		
+		<title>Student Results</title>
+
+		<script type="text/javascript">
+		
+		function getReport(){
+
+					
+					
+					var Rate1 = document.getElementById('txRate1').value;
+                                       
+					var Rate2 = document.getElementById('txRate2').value;
+
+					
+					var Rate3 = document.getElementById('txRate3').value;
+                    var Rate4 = document.getElementById('txRate4').value;
+                    var Rate5 = document.getElementById('txRate5').value;
+					
+					//calculate the total marks (using double notation technique)
+					var BillAmount  = Rate1 -(-Rate2) -(-Rate3)-(-Rate4) -(-Rate5);
+					
+									
+					
+					
+						
+					//display the results	
+					document.getElementById('txCustomerName').value = document.getElementById('tx1CustomerName').value;
+					document.getElementById('txDate&Time').value = document.getElementById('tx1Date&Time').value;
+					document.getElementById('txBillNo').value = document.getElementById('tx1BillNo').value;;
+					document.getElementById('txBillAmount').value = BillAmount;
+					
+		
+		} //end of function getReport
+		
+		</script>
+
+<style>
+body {
+  background-image: url("https://hips.hearstapps.com/hmg-prod/images/healthy-groceries-1525213305.jpg");
+background-repeat: no-repeat;
+  height: 5vh;
+  background-size: cover;
+  background-position: center;
+  
+    
+}
+.centered-wrapper {
+    position: relative;
+    text-align: center;
+}
+.centered-wrapper:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 0; height: 100%;
+    vertical-align: middle;
+}
+.centered-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  
+  font-size: 20px;
+
+   color:antiquewhite;
+   
+  
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+</style>
+
+	</head>
+		
+
+	<body class="centered-wrapper">
+<div class="centered-content">		
+    <h1>WELCOME TO SUPER MARKET</h1>	
+<fieldset style="width:600px">
+   
+	    		<legend><b>Customer Product Entry:</b></legend>
+				Customer Name:<input type="text" id="tx1CustomerName"> &nbsp;&nbsp;
+				Date & Time:<input type="datetime-local" id="tx1Date&Time"> <br/><br/>
+                Bill No:<input type="number" id="tx1BillNo" min=1> <br/><br/>
+				
+
+<table>
+				<td><tr><input type="text" id="Products" placeholder="Products"></td></tr>
+                <td><tr>   <input type="text" id="Quantity" placeholder="Quantity"></td></tr>
+                <td><tr>  <input type="text"  placeholder="Rate"></td></tr>
+                <td><tr>               <input type="text" id="Product2"></td></tr>
+                <td><tr>     <input type="text"></td></tr>
+					<input type="text" id="txRate1">
+                                        <input type="text" >
+					<input type="text">
+					<input type="text" id="txRate2">
+<input type="text" >	
+<input type="text">
+					<input type="text" id="txRate3">
+<input type="text" >
+					<input type="text">
+					<input type="text" id="txRate4">
+<input type="text" >
+					<input type="text"></td></tr>
+					<input type="text" id="txRate5">
+					
+                                        				</table><br/><br/>
+				<input type="button" value="Get Bill" onClick="getReport();">
+			</fieldset>
+
+			
+				<h2>Bill Amount</h2>
+				
+				<table class="center">
+					<tr><td>Customer Name</td><td><input type="text" id="txCustomerName" readonly></td></tr>
+					<tr><td>Date & Time</td><td><input type="text" id="txDate&Time" readonly></td></tr>
+					<tr><td>Bill No</td><td><input type="text" id="txBillNo" readonly></td></tr>
+					<tr><td>BillAmount</td><td><input type="text" id="txBillAmount" readonly></td></tr>
+				</table>	
+                <h2 style="color:blue;"><i>Thank You for Buying,Visit Us Again!!!</i></h2>
+			</div>
+			
+	</body>
+</html>
